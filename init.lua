@@ -92,6 +92,17 @@ if vim.g.vscode then
     { 'n', '<leader>ex', 'workbench.view.extensions' },
     --term toggle
     { 'n', '<leader>th', 'workbench.action.togglePanel' },
+    --tabs
+    { 'n', '<S-Tab>', 'workbench.action.nextEditor' },
+    { 'n', '<C-S-Tab>', 'workbench.action.previousEditor' },
+    -- Paste from clipboard like Ctrl+V (Normal mode)
+{ 'n', '<C-v>', 'editor.action.clipboardPasteAction' },
+
+-- Paste from clipboard like Ctrl+V (Visual mode)
+{ 'v', '<C-v>', 'editor.action.clipboardPasteAction' },
+
+   
+
     
   }
 

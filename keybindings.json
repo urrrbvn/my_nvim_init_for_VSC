@@ -1,0 +1,44 @@
+[
+  // Навигация между всеми элементами UI
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown", 
+    "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
+  },
+  {
+    "key": "ctrl+l", 
+    "command": "workbench.action.navigateRight",
+    "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
+  },
+  
+  // Альтернативно, можно отключить стандартные бинды VSCode
+  {
+    "key": "ctrl+h",
+    "command": "-deleteLeft"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "shift+tab", 
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+  }
+]

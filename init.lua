@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 
 -- open config
 vim.cmd('nmap <leader>co :e ~/.config/nvim/init.lua<cr>')
+vim.cmd([[cnoreabbrev q call VSCodeNotify('workbench.action.closeEditorsInGroup')]])
 
 -- sync system clipboard
 vim.opt.clipboard = 'unnamedplus'
@@ -96,13 +97,18 @@ if vim.g.vscode then
     { 'n', '<S-Tab>', 'workbench.action.nextEditor' },
     { 'n', '<C-S-Tab>', 'workbench.action.previousEditor' },
     -- Paste from clipboard like Ctrl+V (Normal mode)
-{ 'n', '<C-v>', 'editor.action.clipboardPasteAction' },
-
+    { 'n', '<C-v>', 'editor.action.clipboardPasteAction' },
 -- Paste from clipboard like Ctrl+V (Visual mode)
-{ 'v', '<C-v>', 'editor.action.clipboardPasteAction' },
+    { 'v', '<C-v>', 'editor.action.clipboardPasteAction' },
+    --folds
+    { 'i', '<C-o>', 'editor.toggleFold' },
+    { 'i', '<C-c>', 'editor.toggleFold' }, 
+    { 'n', '<C-o>', 'editor.toggleFold' },
+    { 'n', '<C-c>', 'editor.toggleFold' },
+    --close fiile 
+    { 'n', '<leader>c', 'workbench.action.closeActiveEditor' },
 
    
-
     
   }
 

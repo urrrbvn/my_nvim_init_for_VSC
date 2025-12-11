@@ -7,7 +7,7 @@
   },
   {
     "key": "ctrl+j",
-    "command": "workbench.action.navigateDown", 
+    "command": "workbench.action.navigateDown",
     "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
   },
   {
@@ -16,11 +16,10 @@
     "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
   },
   {
-    "key": "ctrl+l", 
+    "key": "ctrl+l",
     "command": "workbench.action.navigateRight",
     "when": "editorTextFocus || sideBarFocus || panelFocus || terminalFocus"
   },
-  
   // Альтернативно, можно отключить стандартные бинды VSCode
   {
     "key": "ctrl+h",
@@ -32,7 +31,7 @@
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "shift+tab", 
+    "key": "shift+tab",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
@@ -40,5 +39,32 @@
     "key": "enter",
     "command": "acceptSelectedSuggestion",
     "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
-  }
+  },
+  //motions in palette comand
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inQuickOpen && inFilePicker"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inQuickOpen && inFilePicker"
+  },
+  //toggle sidebar
+  //   {
+  //     "key": "space e",
+  //     "command": "workbench.action.toggleSidebarVisibility",
+  //     "when": "editorTextFocus"
+  //   }
 ]
